@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Found</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
+    <script>
+    function btnFunc1(){
+    document.getElementById("btn1").classList.remove("btnDeactivated");
+    document.getElementById("btn2").classList.add("btnDeactivated");
+
+    </script>
+    <style>
+      body {
+          background-image: url('https://sb-map-revamp.neocities.org/bg.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+      }
+      h1 {color:magenta; font-size:40px; background-color:navy; padding:5px; font-family: 'Orbitron'; word-spacing:10px;}
+      h2 {color:magenta; font-size:20px; padding:0px; font-family: 'Orbitron'; word-spacing:5px;}
+      p {color:white; font-family: 'Arial'; font-size:12px;}
+      label {color:white;}
+      ul {color:white;}
+      a {color:magenta;}
+      button {color:navy;}
+      * {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 100%;
+}
+
+.right {
+  float: right;
+  width: 0%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 19px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: magenta;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px magenta;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+.slider.round {
+  border-radius:34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.activeBtn {
+    background-color: magenta;
+    border: none;
+    color: navy;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    height: 46px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 100px;
+}
+
+.deactiveBtn {
+    background-color: magenta;
+    border: none;
+    color: navy;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    height: 46px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 200px;
+}
+
+.btnDeactivated {
+    background-color: navy!important;
+    color: white!important;
+    border: 2px solid magenta!important;
+}
+
+.btnDeactivated:hover {
+    background-color: #00afff!important;
+    color: black!important;
+}
+
+    </style>
+  </head>
+  <body>
+    <center><h1>Page Not Found</h1></center>
+    <div class="row">
+      <div class="column left" style="background-color:navy; text-align:center;">
+       <center><h2>The requested page was not found.</h2></center>
+        <center><button type="button" id="btn1" class="deactiveBtn btnDeactivated" onclick="location.href='https://sb-map-revamp.neocities.org'">Return to the Home Page</button></center>
+      </div>
+    </div>
+  </body>
+</html>
