@@ -162,18 +162,21 @@ function btnFunc7(){
 
 .left {
   width: 20%;
+  order: 1;
 }
 
 .right {
   float: right;
-  width: 60%;
+  order: 2;
+  width: 60%; /*47.2 if it wont center*/
 }
 
 /* Clear floats after the columns */
 .row:after {
   content: "";
-  display: table;
+  display: flex;
   clear: both;
+  
 }
 
 .center {
@@ -259,7 +262,7 @@ input:checked + .slider:before {
     border-bottom-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    width: 100px;
+    width: 115px;
 }
 
 .deactiveBtn {
@@ -279,7 +282,7 @@ input:checked + .slider:before {
     border-bottom-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    width: 100px;
+    width: 115px;
 }
 
 .btnDeactivated {
@@ -292,6 +295,21 @@ input:checked + .slider:before {
     background-color: #00afff!important;
     color: black!important;
 }
+
+@media only screen and (max-width: 800px) {
+  .left, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+   .left {
+     order: 2;
+   }
+   .right {
+     order: 1;
+   }
 
     </style>
   </head>
@@ -323,7 +341,7 @@ input:checked + .slider:before {
       
   </div>
   <div class="column right" style="background-color:navy;">
-    <img id="image" src="https://sb-map-revamp.neocities.org/maps/moddedruin/GFnew.PNG" height="561px" class="center" />
+    <img id="image" src="https://sb-map-revamp.neocities.org/maps/moddedruin/GFnew.PNG" style="width:78.2%" class="center" />
   </div>
 </div>
 
